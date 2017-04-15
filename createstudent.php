@@ -15,14 +15,30 @@ require_once 'db.php';
     <div class="row">
         <div id="" class="col-md-6 col-md-offset-3 wrapper">
             <?php
-            if (isset($_SESSION['coursefield'])){
-                echo $_SESSION['coursefield'];
-                unset($_SESSION['coursefield']);
+            if (isset($_SESSION['filesuccess'])){
+                echo $_SESSION['filesuccess'];
+                unset($_SESSION['filesuccess']);
             } ?>
             <?php
-            if (isset($_SESSION['codefield'])) {
-                echo $_SESSION['codefield'];
-                unset($_SESSION['codefield']);
+            if (isset($_SESSION['fileerror'])) {
+                echo $_SESSION['fileerror'];
+                unset($_SESSION['fileerror']);
+            }
+            ?>
+            <?php
+            if (isset($_SESSION['firstname'])){
+                echo $_SESSION['firstname'];
+                unset($_SESSION['firstname']);
+            } ?>
+            <?php
+            if (isset($_SESSION['lastname'])) {
+                echo $_SESSION['lastname'];
+                unset($_SESSION['lastname']);
+            }
+            ?><?php
+            if (isset($_SESSION['id'])) {
+                echo $_SESSION['id'];
+                unset($_SESSION['id']);
             }
             ?>
             <form class=" form-img center-block " action="upload.php" method="post" enctype="multipart/form-data">

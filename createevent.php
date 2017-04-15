@@ -14,16 +14,32 @@ require_once 'db.php';
     <div class="row">
         <div id="" class="col-md-6 col-md-offset-3 wrapper">
             <?php
-            if (isset($_SESSION['coursefield'])){
-                echo $_SESSION['coursefield'];
-                unset($_SESSION['coursefield']);
+            if (isset($_SESSION['coursefailed'])){
+                echo $_SESSION['coursefailed'];
+                unset($_SESSION['coursefailed']);
             } ?>
             <?php
-            if (isset($_SESSION['codefield'])) {
-                echo $_SESSION['codefield'];
-                unset($_SESSION['codefield']);
+            if (isset($_SESSION['date'])){
+                echo $_SESSION['date'];
+                unset($_SESSION['date']);
+            } ?>
+            <?php
+            if (isset($_SESSION['start'])) {
+                echo $_SESSION['start'];
+                unset($_SESSION['start']);
             }
                 ?>
+            <?php
+            if (isset($_SESSION['end'])){
+                echo $_SESSION['end'];
+                unset($_SESSION['end']);
+            } ?>
+            <?php
+            if (isset($_SESSION['course'])) {
+                echo $_SESSION['course'];
+                unset($_SESSION['course']);
+            }
+            ?>
             <form id="login" action ="create-event.php" method="post">
                 <div class="form-group">
                     <label for="Studentgroup">Date</label>
