@@ -43,6 +43,7 @@ include('header.php');
                         <option data-tokens="14:00" value="14:00">14:00</option>
                         <option data-tokens="15:00" value="15:00">15:00</option>
                         <option data-tokens="16:00" value="16:00">16:00</option>
+                    </select>
                 </div>
                 <div class="form-group">
                     <label for="courseCode">Finish Time</label>
@@ -55,6 +56,7 @@ include('header.php');
                         <option data-tokens="15:00" value="15:00">15:00</option>
                         <option data-tokens="16:00" value="16:00">16:00</option>
                         <option data-tokens="17:00" value="17:00">17:00</option>
+                    </select>
                 </div>
 
                 <button type="submit" name="submit" class="btn btn-default">Create Event</button>
