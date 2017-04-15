@@ -46,7 +46,7 @@ if (isset($_POST['submit'])) {
 
         if ($link->query("INSERT INTO events (course_Code, event_date, start_time, end_time)VALUES('$course','$date','$start','$end')")){
 
-            $_SESSION['coursefailed'] = "<div class='alert alert-sucess'>
+            $_SESSION['coursefailed'] = "<div class='alert alert-success'>
             <span class='glyphicon glyphicon-info-sign'></span> Event was successfully created</div>";
             header('Location: createevent.php');
         } else {
