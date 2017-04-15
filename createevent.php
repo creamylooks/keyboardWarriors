@@ -58,6 +58,17 @@ include('header.php');
                         <option data-tokens="17:00" value="17:00">17:00</option>
                     </select>
                 </div>
+                <div class="form-group">
+                    <label for="courseCode">Course</label>
+                    <select class="selectpicker form-control" data-live-search="true" name="course" required= "required">
+                        <?php
+                        $ans=$link->query("Select * FROM courses");
+                        while ($row=$ans->fetch_assoc()) {
+                            echo'<option value='.'"'.$row['course_Code'].'"'.'>'.$row['course_Code'].'</option>';
+                        }
+                        ?>
+                    </select>
+                </div>
 
                 <button type="submit" name="submit" class="btn btn-default">Create Event</button>
             </form>
