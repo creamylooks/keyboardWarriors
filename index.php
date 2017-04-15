@@ -9,7 +9,7 @@
 include('header.php') ;
 ?>
 
-
+<body class="body">
 <div class = "container">
     <div class="row">
         <div class="wrapper">
