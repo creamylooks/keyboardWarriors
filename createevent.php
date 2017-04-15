@@ -84,7 +84,7 @@ require_once 'db.php';
                         while ($row=$ans->fetch_assoc()) {
                             $code=$row['course_Code'];
                             $title=$row['title'];
-                            echo'<option value=".'.$code.'.">'.$title.'</option>';
+                            echo'<option value="'.$code.'">'.$title.'</option>';
                         }
                         ?>
                     </select>
