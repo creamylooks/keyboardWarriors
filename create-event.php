@@ -7,7 +7,7 @@
  */
 session_start();
 require_once 'db.php';
-if (isset($_POST['Submit'])) {
+if (isset($_POST['submit'])) {
     if (empty($_POST['date'])||($_POST['date']=="")) {// this checks if email field is empty
         $_SESSION['date'] = "<div class='alert alert-danger'>
         <span class='glyphicon glyphicon-info-sign'></span>Date field cannot be empty </div>";
