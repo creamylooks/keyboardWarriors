@@ -44,7 +44,7 @@ if (isset($_POST['submit'])) {
         $course = $link->real_escape_string(strip_tags($cos));
 
 
-        if ($link->query("INSERT INTO event (course_Code, event_date, start_time, end_time)VALUES('$course','$date','$start','$end')")){
+        if ($link->query("INSERT INTO event (id,course_Code, event_date, start_time, end_time)VALUES('','$course','$date','$start','$end')")){
 
             $_SESSION['coursefailed'] = "<div class='alert alert-sucess'>
             <span class='glyphicon glyphicon-info-sign'></span> Event was successfully created</div>";
