@@ -49,11 +49,11 @@ if (isset($_POST['submit'])) {
 
             $_SESSION['coursefailed'] = "<div class='alert alert-sucess'>
             <span class='glyphicon glyphicon-info-sign'></span> Event was successfully created</div>";
-            header('Location: createevent.php');
+            //header('Location: createevent.php');
         } else {
             $_SESSION['coursefailed'] = "<div class='alert alert-danger'>
             <span class='glyphicon glyphicon-info-sign'></span> Failed to create event</div>";
-            header('Location: createevent.php');
+            //header('Location: createevent.php');
         }
     }
 }
