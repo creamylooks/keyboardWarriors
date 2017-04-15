@@ -12,6 +12,21 @@ include('header.php') ;
 <body class="body">
 <div class = "container">
     <div class="row">
+        <?php
+        if (isset($_SESSION['Username'])){
+            echo $_SESSION['Username'];
+            unset($_SESSION['Username']);
+        } ?>
+        <?php
+        if (isset($_SESSION['Password'])){
+            echo $_SESSION['Password'];
+            unset($_SESSION['Password']);
+        } ?>
+        <?php
+        if (isset($_SESSION['coursefailed'])){
+            echo $_SESSION['coursefailed'];
+            unset($_SESSION['coursefailed']);
+        } ?>
         <div class="wrapper">
             <form action="login.php" method="post" name="Login_Form" class="form-signin">
                 <h3 class="form-signin-heading">Welcome Back! Please Sign In</h3>
