@@ -6,6 +6,8 @@
  * Time: 5:55 PM
  */
 include('header.php');
+
+require_once 'db.php';
 ?>
 <body>
 <div class="container">
