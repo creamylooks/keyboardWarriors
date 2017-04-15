@@ -30,7 +30,7 @@ if (isset($_POST['Submit'])) {
         $row = $ins->fetch_array();
         if ($password == $row['password']) {
 
-            $_SESSION['login'] = true;
+            $_SESSION['currentuser'] = $username;
 
             header('Location: createevent.php');
         } else {
