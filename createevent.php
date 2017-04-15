@@ -10,7 +10,7 @@ include('header.php');
 <body>
 <div class="container">
     <div class="row">
-        <div id="" class="col-md-6 col-md-offset-3">
+        <div id="" class="col-md-6 col-md-offset-3 wrapper">
             <?php
             if (isset($_SESSION['coursefield'])){
                 echo $_SESSION['coursefield'];
