@@ -29,8 +29,7 @@ require_once 'db.php';
                     ?>
                 </select>
             </div>
-            <div id="" class="col-md-6 col-md-offset-3 wrapper">
-                <div class="form-group">
+            <div class="form-group">
                     <label for="start">Student</label>
                     <select class="selectpicker form-control" name="student[]" multiple="multiple">
                     <?php
