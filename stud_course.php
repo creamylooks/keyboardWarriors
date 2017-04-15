@@ -42,8 +42,9 @@ require_once 'db.php';
                                         $id=$row['student_ID'];
                             echo'<option value="'.$row["student_ID"].'" >'.$row["Firstname"].' '.$row["Lastname"].'</option>';
                         }
-                                ?></select>
+                    ?></select>
                 </div>
+            <button type="submit" name="submit" class="btn btn-default">Add Student to Course</button>
             </div>
                     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
                     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
