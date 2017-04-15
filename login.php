@@ -27,7 +27,7 @@ if (isset($_POST['Submit'])) {
         $password = $link->real_escape_string(strip_tags($ps));
 
         $ins = $link->query("SELECT password FROM lecturers where lecturer_ID='$username'");
-        $row = $ins.fetch_array();
+        $row = $ins->fetch_array();
         if ($password == $row['password']) {
 
             $_SESSION['login'] = true;
