@@ -64,7 +64,8 @@ include('header.php');
                         <?php
                         $ans=$link->query("Select * FROM courses");
                         while ($row=$ans->fetch_assoc()) {
-                            echo'<option value='.'"'.$row['course_Code'].'"'.'>'.$row['course_Code'].'</option>';
+                            $code=$row['course_Code'];
+                            echo'<option value=".'.$code.'.">".'.$code.'"</option>';
                         }
                         ?>
                     </select>
