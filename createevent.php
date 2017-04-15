@@ -33,7 +33,7 @@ include('header.php');
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="courseCode">Start Time</label>
+                    <label for="start">Start Time</label>
                     <select class="selectpicker form-control" data-live-search="true" name="start" required= "required">
                         <option data-tokens="09:00" value="09:00">09:00</option>
                         <option data-tokens="10:00" value="10:00">10:00</option>
@@ -46,7 +46,7 @@ include('header.php');
                     </select>
                 </div>
                 <div class="form-group">
-                    <label for="courseCode">Finish Time</label>
+                    <label for="end">Finish Time</label>
                     <select class="selectpicker form-control" data-live-search="true" name="end" required= "required">
                         <option data-tokens="10:00" value="10:00">10:00</option>
                         <option data-tokens="11:00" value="11:00">11:00</option>
@@ -59,13 +59,14 @@ include('header.php');
                     </select>
                 </div>
                 <div class="form-group">
-                    <label for="courseCode">Course</label>
+                    <label for="course">Course</label>
                     <select class="selectpicker form-control" data-live-search="true" name="course" required= "required">
                         <?php
                         $ans=$link->query("Select * FROM courses");
                         while ($row=$ans->fetch_assoc()) {
                             $code=$row['course_Code'];
-                            echo'<option value=".'.$code.'.">".'.$code.'"</option>';
+                            $title=$row['title'];
+                            echo'<option value=".'.$code.'.">".'.$title.'"</option>';
                         }
                         ?>
                     </select>
