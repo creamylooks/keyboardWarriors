@@ -41,7 +41,7 @@ if (isset($_POST['submit'])) {
         $start = $link->real_escape_string(strip_tags($s));
         $end = $link->real_escape_string(strip_tags($e));
         $course = $link->real_escape_string(strip_tags($cos));
-
+echo"$date";
 
         $ins = $link->query("INSERT INTO event (course_Code, event_date, start_time, end_time)VALUES ('$course', '$date', '$start','$end')");
 

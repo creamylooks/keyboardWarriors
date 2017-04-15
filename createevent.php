@@ -47,7 +47,7 @@ require_once 'db.php';
                         <div class="input-group-addon">
                             <i class="fa fa-calendar-check-o"></i>
                         </div>
-                        <input class="form-control" id="date" required= "required" name="date" placeholder="YYY/MM/DD" type="date"></input>
+                        <input class="form-control" id="date" required= "required" name="date" placeholder="YYYY/MM/DD" type="date"></input>
                     </div>
                 </div>
                 <div class="form-group">
