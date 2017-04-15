@@ -41,19 +41,17 @@ if (isset($_POST['submit'])) {
         $start = $link->real_escape_string(strip_tags($s));
         $end = $link->real_escape_string(strip_tags($e));
         $course = $link->real_escape_string(strip_tags($cos));
-echo"$end";
 
-        $ins = $link->query("INSERT INTO event (course_Code, event_date, start_time, end_time)VALUES ('$course', '$date', '$start','$end')");
 
-        if ($ins){
+        if ($link->query("INSERT INTO event (course_Code, event_date, start_time, end_time)VALUES('$course','$date','$start','$end')")){
 
             $_SESSION['coursefailed'] = "<div class='alert alert-sucess'>
             <span class='glyphicon glyphicon-info-sign'></span> Event was successfully created</div>";
-            //header('Location: createevent.php');
+            header('Location: createevent.php');
         } else {
             $_SESSION['coursefailed'] = "<div class='alert alert-danger'>
             <span class='glyphicon glyphicon-info-sign'></span> Failed to create event</div>";
-            //header('Location: createevent.php');
+            header('Location: createevent.php');
         }
     }
 }
