@@ -52,7 +52,7 @@ if (isset($_POST['Submit'])) {
             header('Location: createevent.php');
         } else {
             $_SESSION['coursefailed'] = "<div class='alert alert-danger'>
-            <span class='glyphicon glyphicon-info-sign'></span> Failed to login. Please check your credentials</div>";
+            <span class='glyphicon glyphicon-info-sign'></span> Failed to create event</div>";
             header('Location: createevent.php');
         }
     }
