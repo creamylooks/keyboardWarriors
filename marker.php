@@ -3,16 +3,43 @@
 
 require_once 'db.php';
   $cod = $_POST['studBCode'];
+$ins = $link->query("insert into tester(tc)VALUES ('$cod')");
 
 ?>
 <?php include('header.php');?>
+
+
+<script>
+    function loadTable(){
+
+
+
+            xmlhttp=GetXmlHttpObject();
+            var url="wait.php";
+  xmlhttp.onreadystatechange=statechanged;
+            xmlhttp.open("GET", url, true);
+            xmlhttp.send(null);
+        }
+
+        function statechanged()
+        {
+            if(xmlhttp.readyState==4) {
+                document.getElementById("loaded").innerHTML=xmlhttp.responseText;
+            }
+        }
+
+    }
+
+
+
+</script>
   <body>
   <div class="container">
       <div class="row">
           <?php
-          $sq1= "SELECT * FROM student WHERE student_ID = '$cod'";
-                $q1=mysqli_query($link, $sq1);
-            $rom = mysqli_fetch_assoc($q1);
+          $sq1= "SELECT tc FROM tester WHERE student_ID = '$cod'";
+                $q1=$link->query($sq1);
+            $rom = $q1->fetch_assoc();
             ?>
 
             <table class="table table-striped">
@@ -22,25 +49,11 @@ require_once 'db.php';
                 <th> Last Name</th>
               </thead>
               <tbody>
-                <td><?php echo $rom['student_ID']; ?></td>
-                <td><?php echo $rom['firstname'] ?></td>
-                <td><?php echo $rom['lastname'] ?></td>
-              <?php
-                  if($_POST['studBCode'] !=null){
-              while($_POST['studBCode'] !=$cod){
-                $sq2= "SELECT * FROM student WHERE student_ID = '{$_POST['studBCode']}'";
-                $q2=mysqli_query($link, $sq2);
-                $rome = mysqli_fetch_assoc($q2);
-                $stu=$rome['student_ID'];
-                $fir=$rome['firstname'];
-                $las=$rome['lastname'];
-                  echo   "<td>".$stu."<td>".
-                        "<td>".$fir."<td>".
-                        "<td>".$las."<td>";
-                $cod = $_POST['studBCode'];
-              }
-            }
-              ?>
+              <div id="loaded">
+
+              </div>
+
+
 
               </body>
 
@@ -56,5 +69,8 @@ require_once 'db.php';
         <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/js/bootstrap-select.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.min.js"></script>
-        </body>
+<script>
+    window.setInterval("loadTable()", 5000);
+</script>
+</body>
         </html>
