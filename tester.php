@@ -11,7 +11,7 @@ require ('db.php');
  
 
 $id = $_POST["studBCode"];
-
+$ins = $link->query("insert into tester(tc)VALUES ('$id')");
 
 
 $ans=$link->query("Select * From student where student_ID='$id'");
