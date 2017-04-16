@@ -1,4 +1,4 @@
-<?php
+(<?php
 /**
  * Created by PhpStorm.
  * User: offormachukwunonso
@@ -7,12 +7,14 @@
  */
 <?php
 error_reporting(0);
-require 'db.php';
+require ('db.php');
  
-$name = $_POST["name"];
+$df = $_GET['password'];
+$nn = $_GET['username'];
+/*$name = $_POST["username"];
 $password = $_POST["password"];
 $email = $_POST["email"];
- 
+ */
 //$name = "sdf";
 //$password = "sdf";
 //$email = "sdf@r54";
