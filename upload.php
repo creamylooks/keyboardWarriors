@@ -47,6 +47,7 @@ if (isset($_POST['Submit'])) {
                         if (!move_uploaded_file($tmp_dir, $folder . $imgFile)) {
                             $_SESSION['fileerror'] = "<div class='alert alert-danger'>
                                        <span class='glyphicon glyphicon-info-sign'></span>Image cannot be moved</div>";
+                            header('location: createstudent.php');
                         } else {
                             $firstname = $link->real_escape_string(strip_tags($_POST['firstname']));
                             $lastname = $link->real_escape_string(strip_tags($_POST['lastname']));
