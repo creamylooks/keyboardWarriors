@@ -19,6 +19,12 @@ $row=$ans->fetch_array();
 $firstname=$row['Firstname'];
 $lastname=$row['Lastname'];
 $image=$row['image_loc'];
+
+
+
+$data = array();
+$data=['image'=>$image,'firstname'=>$firstname,'lastname'=>$lastname];
+echo json_encode(array('user'=>$data));
 echo "{$image}':'{$firstname}':'{$lastname}";
 ?>
 
