@@ -19,11 +19,11 @@ $row=$ans->fetch_array();
 $firstname=$row['Firstname'];
 $lastname=$row['Lastname'];
 $image=$row['image_loc'];
-
+$student=$row['student_ID'];
 
 
 $data = array();
-$data=['image'=>$image,'firstname'=>$firstname,'lastname'=>$lastname];
+$data=['image'=>$image,'firstname'=>$firstname,'lastname'=>$lastname,'student'=>$student];
 echo json_encode(array('user'=>$data));
 
 ?>
