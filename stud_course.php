@@ -14,6 +14,7 @@ require_once 'db.php';
 <div class="container">
     <div class="row">
         <div id="" class="col-md-6 col-md-offset-3 wrapper">
+            <form action="set_stud_course.php" method="post">
             <div class="form-group">
                 <label for="start">Course</label>
 
@@ -45,6 +46,7 @@ require_once 'db.php';
                     ?></select>
                 </div>
             <button type="submit" name="submit" class="btn btn-default">Add Student to Course</button>
+            </form>
             </div>
                     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
                     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
