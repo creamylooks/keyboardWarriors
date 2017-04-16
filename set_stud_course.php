@@ -24,7 +24,7 @@ if (isset($_POST['submit'])) {
     }
 
     if((!empty($_POST['course'])&&(sizeof($student)>0))){
-
+    var_dump($student);
         foreach ($student as $item){
             $link->query("INSERT INTO stud_course SET(student_ID,course_ID )values('$item','$cos')");
 
