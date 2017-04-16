@@ -19,7 +19,7 @@ $row=$ans->fetch_array();
 $firstname=$row['Firstname'];
 $lastname=$row['Lastname'];
 $image=$row['image_loc'];
-echo "$image.':'.$firstname.':'.$lastname";
+echo "{$image}':'{$firstname}':'{$lastname}";
 ?>
 
 
