@@ -55,9 +55,10 @@ if (isset($_POST['Submit'])) {
                             $imgurl = $folder . $imgFile;
                             $link->query("INSERT INTO student (student_ID,image_loc, Firstname, Lastname)VALUES ('$id', '$imgurl', '$firstname','$lastname')");
 
-                            header('location: createstudent.php');
+
                             $_SESSION['filesuccess'] = "<div class='alert alert-success'>
                                        <span class='glyphicon glyphicon-info-sign'></span>Student created successfully.</div>";
+                            header('location: createstudent.php');
                         }
         }
     }
