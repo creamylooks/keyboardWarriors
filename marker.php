@@ -25,7 +25,7 @@ require_once 'db.php';
               <?php
                   if($_POST['studBCode'] !=null){
               while($_POST['studBCode'] !=$cod){
-                $sq2= "SELECT * FROM student WHERE student_ID = '$_POST['studBCode']'";
+                $sq2= "SELECT * FROM student WHERE student_ID = '{$_POST['studBCode']}'";
                 $q2=mysqli_query($link, $sq2);
                 $rome = mysqli_fetch_assoc($q2);
                   echo   "<td>".'{$rome['student_ID']}'."<td>".
