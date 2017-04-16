@@ -35,6 +35,7 @@
                 <li><a href="createstudent.php">Create Student</a></li>
                 <li><a href="createevent.php">Create Event</a></li>
                 <li><a href="stud_course.php">Student Course Mapping</a></li>
+                <li><a href="marker.php">View Attendance</a></li>
 
         </div>
     </div>
