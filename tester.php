@@ -7,5 +7,6 @@
  */
 require_once 'db.php';
 echo"{$_POST['tc']}";
-$tc=$_POST['tc'];
+if(!empty($_POST['tc'])){
 $sql=$link->query("INSERT INTO tester(tc)VALUES('$tc')");
+}
