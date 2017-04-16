@@ -27,13 +27,14 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="index.php">WarrantySafe</a>
+            <a class="navbar-brand" href="index.php">TruantHunter</a>
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
                 <li><a href="index.php">Home</a></li>
                 <li><a href="createstudent.php">Create Student</a></li>
                 <li><a href="createevent.php">Create Event</a></li>
+                <li><a href="stud_course.php">Student Course Mapping</a></li>
 
         </div>
     </div>
