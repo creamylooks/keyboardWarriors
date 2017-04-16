@@ -20,7 +20,7 @@ if (isset($_POST['submit'])) {
         <span class='glyphicon glyphicon-info-sign'></span>Course Code field cannot be empty </div>";
         header('Location: stud_course.php');
     }else{
-        $stud=$_POST['student'];
+        $student=$_POST['student'];
     }
 
     if((!empty($_POST['course'])||!($_POST['course']=="")&&!empty($_POST['student'])||!($_POST['student']==""))){
