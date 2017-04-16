@@ -28,9 +28,12 @@ require_once 'db.php';
                 $sq2= "SELECT * FROM student WHERE student_ID = '{$_POST['studBCode']}'";
                 $q2=mysqli_query($link, $sq2);
                 $rome = mysqli_fetch_assoc($q2);
-                  echo   "<td>".{$rome['student_ID']}."<td>".
-                        "<td>".{$rome['firstname']}."<td>".
-                        "<td>".{$rome['lastname']}."<td>";
+                $stu=$rome['student_ID'];
+                $fir=$rome['firstname'];
+                $las=$rome['lastname'];
+                  echo   "<td>".$stu."<td>".
+                        "<td>".$fir."<td>".
+                        "<td>".$las."<td>";
                 $cod = $_POST['studBCode'];
               }
             }
