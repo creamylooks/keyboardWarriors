@@ -36,11 +36,6 @@ $ins = $link->query("insert into tester(tc)VALUES ('$cod')");
   <body>
   <div class="container">
       <div class="row">
-          <?php
-          $sq1= "SELECT tc FROM tester WHERE student_ID = '$cod'";
-                $q1=$link->query($sq1);
-            $rom = $q1->fetch_assoc();
-            ?>
 
             <table class="table table-striped">
               <thead>
