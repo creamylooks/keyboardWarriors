@@ -65,7 +65,7 @@ alert("hello");
         <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/js/bootstrap-select.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.min.js"></script>
 <script>
-    window.setInterval("loadTable", 2000);
+    setInterval("loadTable", 1000);
 </script>
 </body>
         </html>
