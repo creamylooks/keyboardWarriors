@@ -3,6 +3,7 @@ include('header.php');
 
 require_once 'db.php';
   $cod = $_POST['studBCode'];
+  echo"$cod";
 ?>
   <body>
   <div class="container">
