@@ -32,6 +32,6 @@ if (isset($_POST['submit'])) {
 
             $_SESSION['ins'] = "<div class='alert alert-success'>
         <span class='glyphicon glyphicon-info-sign'></span>Student course mapping done successfully </div>";
-            header('Location: stud_course.php');
+            //header('Location: stud_course.php');
     }
 }
