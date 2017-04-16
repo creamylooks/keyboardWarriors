@@ -5,9 +5,9 @@
  * Date: 4/15/17
  * Time: 8:35 PM
  */
-error_reporting (E_ALL);
+session_start();
 require_once 'db.php';
-if (isset($_POST['Submit'])) {
+if (isset($_POST['submit'])) {
     if (empty($_POST['firstname'])||($_POST['firstname']=="")) {// this checks if email field is empty
         $_SESSION['firstname'] = "<div class='alert alert-danger'>
         <span class='glyphicon glyphicon-info-sign'></span>Firstname cannot be empty </div>";
