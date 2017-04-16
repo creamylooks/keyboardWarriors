@@ -4,8 +4,8 @@
 require_once 'db.php';
   $cod = $_POST['studBCode'];
 
-  echo"$cod";
 ?>
+<?php include('header.php');?>
   <body>
   <div class="container">
       <div class="row">
@@ -14,7 +14,7 @@ require_once 'db.php';
                 $q1=mysqli_query($link, $sq1);
             $rom = mysqli_fetch_assoc($q1);
             ?>
-          <?php include('header.php');?>
+
             <table class="table table-striped">
               <thead>
                 <th> Student ID</th>
