@@ -26,13 +26,12 @@ if (isset($_POST['submit'])) {
     if((!empty($_POST['course'])&&(sizeof($student)>0))){
 
         foreach ($student as $item){
-            $ins =$link->query("insert into stud_course set(student_ID ,course_ID )values('$item','$cos')");
+            $ins =$link->query("INSERT INTO stud_course SET(student_ID,course_ID )values('$item','$cos')");
 
         }
-        if($ins){
+
             $_SESSION['ins'] = "<div class='alert alert-success'>
         <span class='glyphicon glyphicon-info-sign'></span>Student course mapping done successfully </div>";
             header('Location: stud_course.php');
-        }
     }
 }
