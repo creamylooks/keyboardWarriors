@@ -23,7 +23,7 @@ if (isset($_POST['submit'])) {
         $student=$_POST['student'];
     }
 
-    if((!empty($_POST['course'])||!($_POST['course']=="")&&!empty($_POST['student'])||!($_POST['student']==""))){
+    if((!empty($_POST['course'])||!($_POST['course']=="")&&(sizeof($student)>0))){
 
         foreach ($student as $item){
             $ins =$link->query("insert into stud_course set(student_ID ,course_ID )values('$item','$cos')");
