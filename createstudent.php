@@ -54,7 +54,7 @@ require_once 'db.php';
                 </div>
                 <div class="form-group">
                     <label for="end">Lastname</label>
-                    <input type="text" class="form-control" name="lastname" placeholder="Lirstname" required="" autofocus="" />
+                    <input type="text" class="form-control" name="lastname" placeholder="Lastname" required="" autofocus="" />
                 </div>
                 <div class="form-group">
                     <label for="start">Student Id</label>
@@ -62,7 +62,7 @@ require_once 'db.php';
                 </div>
 
 
-                <button type="submit" name="submit" class="btn btn-default">Create Event</button>
+                <button type="submit" name="submit" class="btn btn-default">Create Student</button>
             </form>
         </div>
     </div>
